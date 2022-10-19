@@ -1,8 +1,7 @@
 import { users } from "../data/GenerateData";
 
- export const getUsers = (check) =>
+ export const getUsers = () =>
   new Promise((resolve, reject) => {
-    console.log(check)
     if (!users) {
         return setTimeout(
             () => reject(new Error('Users not found')),

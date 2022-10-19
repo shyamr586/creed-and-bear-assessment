@@ -12,7 +12,6 @@ const Users = () => {
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
-  console.log(fetched);
 
   const meta = {
     total: fetched.total,
@@ -21,10 +20,8 @@ const Users = () => {
   }
 
   useEffect(() => {
-    console.log(fetched.total)
     setUsers(fetched.data);
     setCheckedItems([])
-    console.log("This is running")
   }, [fetched, fetched.total]);
 
   function handleCreate() {

@@ -21,7 +21,6 @@ const CreateDialog = (props) => {
   function handleSubmit() {
     const doCreateUser = async () => {
       const result = await createUser(fetched, fName, lName, email, avatar);
-      console.log(result);
       props.setFetched(result);
       props.handleCreate();
     };

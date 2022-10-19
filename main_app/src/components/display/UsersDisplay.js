@@ -44,7 +44,6 @@ const UsersDisplay = (props) => {
   function handleCheckAll(e) {
     let { checked } = e.target;
     let idArr = users.map((elem) => elem.id);
-    console.log(idArr);
     if (checked) {
       props.setCheckedItems([...props.checkedItems, ...idArr]);
     } else {
@@ -59,14 +58,9 @@ const UsersDisplay = (props) => {
   };
 
   const handleEditItem = (user) => {
-    console.log(user.id)
     setCurrUser(user);
     handleEdit();
   };
-
-  useEffect(() => {
-    console.log(props.checkedItems);
-  }, [props.checkedItems]);
 
   return (
     <>
@@ -139,11 +133,11 @@ const UsersDisplay = (props) => {
             (currPage - 1) * props.perPage,
             currPage * (props.perPage - 1) + currPage
           )
-          .map((user) => {
+          .map((user,i) => {
             return (
               <ListItem
                 divider
-                key={user.id}
+                key={i}
                 secondaryAction={
                   <>
 
@@ -210,7 +204,6 @@ const UsersDisplay = (props) => {
                 count={props.totalPages}
                 color="primary"
                 onChange={(e, v) => {
-                  console.log(v);
                   setCurrPage(v);
                 }}
               />

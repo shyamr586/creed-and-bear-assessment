@@ -32,10 +32,6 @@ const User = () => {
     doGetUser();
   }, [fetched, id]);
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
-
   return (
     <div>
       {editDialogOpen && (

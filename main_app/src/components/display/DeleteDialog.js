@@ -15,7 +15,6 @@ export default function DeleteDialog(props) {
   const { fetched, setFetched } = useContext(PublicContext);
   function handleSubmit() {
     const doDeleteUser = async () => {
-      console.log(props.items)
       const result = await deleteUser(props.items, fetched);
       navigate("/users")
       setFetched(result);

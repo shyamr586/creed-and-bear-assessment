@@ -25,5 +25,3 @@ function createRandomUser(i) {
 for (let i = 1; i<= initial_total; i++) {
   users.data.push(createRandomUser(i));
 }
-
-console.log(users)

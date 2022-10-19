@@ -25,10 +25,6 @@ function App() {
     doGetUsers();
   }, []);
 
-  useEffect(() => {
-    console.log(fetched);
-  }, [fetched]);
-
   return (
     <PublicContext.Provider
       value={{ fetched, setFetched, loggedInUser, setLoggedInUser }}

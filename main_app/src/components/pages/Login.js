@@ -5,7 +5,9 @@ import PublicContext from "../context/PublicContext";
 
 const Login = () => {
   const [username, setUsername] = useState("");
-  const {setLoggedInUser} = useContext(PublicContext)
+  const { setLoggedInUser } = useContext(PublicContext);
+
+  const textFieldStyle = { width: "80%",marginBottom: "1%" }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,23 +19,31 @@ const Login = () => {
       onSubmit={(e) => handleSubmit(e)}
     >
       <TextField
-        style={{ width: "80%" }}
+        style={textFieldStyle}
         variant="outlined"
         placeholder="Enter username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
       <br></br>
+      <br></br>
       <TextField
-        style={{ width: "80%" }}
+        style={textFieldStyle}
         variant="outlined"
-        placeholder="Enter username"
+        placeholder="Enter password"
+        type="password"
       />
       <br></br>
       <br></br>
-      <Button variant="contained" type="submit" onClick={()=>setLoggedInUser(username)}>
-        <Link to="/users">Login</Link>
-      </Button>
+      <Link to="/users" style={{ color: "inherit", textDecoration: "inherit" }}>
+        <Button
+          variant="contained"
+          type="submit"
+          onClick={() => setLoggedInUser(username)}
+        >
+          Login
+        </Button>
+      </Link>
     </form>
   );
 };

@@ -23,8 +23,8 @@ const Navbar = () => {
               aria-haspopup="true"
               color="inherit"
             >
-              <Typography variant="p" style={{fontSize:"12px", paddingRight:"5px"}}>{loggedInUser}</Typography>
               <AccountCircleIcon />
+              <Typography variant="p" style={{fontSize:"12px", paddingLeft:"5px"}}>{loggedInUser}</Typography>
             </IconButton>
           </div>
         </Toolbar>
