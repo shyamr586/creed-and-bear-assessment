@@ -4,7 +4,12 @@ import Users from "./components/pages/Users";
 import UserDisplay from "./components/display/UserDisplay";
 import Login from "./components/pages/Login";
 import { getUsers } from "./components/api/getUsers";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import PublicContext from "./components/context/PublicContext";
 
 function App() {
@@ -20,19 +25,20 @@ function App() {
     doGetUsers();
   }, []);
 
-  useEffect(()=>{
-    console.log(fetched)
-  },[fetched])
-
- 
+  useEffect(() => {
+    console.log(fetched);
+  }, [fetched]);
 
   return (
-    <PublicContext.Provider value={{ fetched, setFetched, loggedInUser, setLoggedInUser }}>
+    <PublicContext.Provider
+      value={{ fetched, setFetched, loggedInUser, setLoggedInUser }}
+    >
       <Router>
         <Routes>
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/users" element={<Users />} />
           <Route exact path="/users/:id" element={<UserDisplay />} />
+          <Route exact path="/" element={<Navigate to="/login" replace />} />
         </Routes>
       </Router>
     </PublicContext.Provider>
