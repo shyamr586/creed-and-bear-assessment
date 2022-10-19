@@ -5,7 +5,7 @@ import UserDisplay from "./components/display/UserDisplay";
 import Login from "./components/pages/Login";
 import { getUsers } from "./components/api/getUsers";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -35,10 +35,10 @@ function App() {
     >
       <Router>
         <Routes>
-          <Route exact path="/creed-and-bear-assessment/login" element={<Login />} />
-          <Route exact path="/creed-and-bear-assessment/users" element={<Users />} />
-          <Route exact path="/creed-and-bear-assessment/users/:id" element={<UserDisplay />} />
-          <Route exact path="/creed-and-bear-assessment/" element={<Navigate to="/creed-and-bear-assessment/login" replace />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/users" element={<Users />} />
+          <Route exact path="/users/:id" element={<UserDisplay />} />
+          <Route exact path="/" element={<Navigate to="/login" replace />} />
         </Routes>
       </Router>
     </PublicContext.Provider>
