@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/creed-and-bear-assessment/static/css/main.d5707b4c.css",
+    "main.js": "/creed-and-bear-assessment/static/js/main.c317816e.js",
+    "static/js/787.9fa5dc5d.chunk.js": "/creed-and-bear-assessment/static/js/787.9fa5dc5d.chunk.js",
+    "index.html": "/creed-and-bear-assessment/index.html",
+    "main.d5707b4c.css.map": "/creed-and-bear-assessment/static/css/main.d5707b4c.css.map",
+    "main.c317816e.js.map": "/creed-and-bear-assessment/static/js/main.c317816e.js.map",
+    "787.9fa5dc5d.chunk.js.map": "/creed-and-bear-assessment/static/js/787.9fa5dc5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5707b4c.css",
+    "static/js/main.c317816e.js"
+  ]
+}
