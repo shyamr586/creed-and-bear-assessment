@@ -38,7 +38,7 @@ function App() {
           <Route exact path="/creed-and-bear-assessment/login" element={<Login />} />
           <Route exact path="/creed-and-bear-assessment/users" element={<Users />} />
           <Route exact path="/creed-and-bear-assessment/users/:id" element={<UserDisplay />} />
-          <Route exact path="/creed-and-bear-assessment/" element={<Navigate to="/login" replace />} />
+          <Route exact path="/creed-and-bear-assessment/" element={<Navigate to="/creed-and-bear-assessment/login" replace />} />
         </Routes>
       </Router>
     </PublicContext.Provider>
