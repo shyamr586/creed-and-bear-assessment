@@ -5,7 +5,7 @@ import UserDisplay from "./components/display/UserDisplay";
 import Login from "./components/pages/Login";
 import { getUsers } from "./components/api/getUsers";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,
