@@ -4,8 +4,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PublicContext from "../context/PublicContext";
 
 const Navbar = () => {
-
-    const {loggedInUser} = useContext(PublicContext)
+  const { loggedInUser } = useContext(PublicContext);
 
   return (
     <div style={{ marginBottom: "8%" }}>
@@ -24,7 +23,12 @@ const Navbar = () => {
               color="inherit"
             >
               <AccountCircleIcon />
-              <Typography variant="p" style={{fontSize:"12px", paddingLeft:"5px"}}>{loggedInUser}</Typography>
+              <Typography
+                variant="p"
+                style={{ fontSize: "12px", paddingLeft: "5px" }}
+              >
+                {loggedInUser}
+              </Typography>
             </IconButton>
           </div>
         </Toolbar>

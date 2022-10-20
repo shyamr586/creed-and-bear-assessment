@@ -1,7 +1,6 @@
 export const createUser = (fetched, first_name, last_name, email, avatar) =>
   new Promise((resolve, reject) => {
     let users = fetched.data;
-    console.log(users)
     let id = users[users.length-1]?users[users.length-1].id+1:1
     if (users) {
       var newUser = {

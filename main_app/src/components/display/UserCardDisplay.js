@@ -22,7 +22,7 @@ const UserCardDisplay = (props) => {
         </Typography>
       </Grid>
       <Grid item xs={4}>
-        <img src={props.avatar} alt={props.first_name+ props.last_name} style={{ float: "right" }}></img>
+        <img src={props.avatar} alt={props.first_name} style={{ float: "right" }}></img>
       </Grid>
     </Grid>
   </Card></div>
